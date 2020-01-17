@@ -64,6 +64,13 @@ class App extends React.Component {
       })
   }
 
+  totalPlayers() {
+    let totalPlayers = this.state.players.reduce((acc, current) => {
+      return acc = acc + 1;
+    }, 0);
+    // console.log(totalPlayers);
+  }
+
   render() {
     return (
       <Container>
@@ -79,6 +86,7 @@ class App extends React.Component {
         </div>
 
         <PlayerList players={this.state.players} />
+        {this.totalPlayers()}
       </Container>
     )
   }
