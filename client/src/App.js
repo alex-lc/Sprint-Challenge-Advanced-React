@@ -67,14 +67,17 @@ class App extends React.Component {
   render() {
     return (
       <Container>
-        <div className="header">
-          <h1>Women's World Cup Soccer Players</h1>
+        <div data-testid="header" className="header">
+          <h1 data-testid="logo">Women's World Cup Soccer Players</h1>
+
           {/* <div className="controls">
             <img src={Moon} alt="Night Mode" />
             <img src={Sun} alt="Day Mode" />
           </div> */}
+
           <ThemeChanger />
         </div>
+
         <PlayerList players={this.state.players} />
       </Container>
     )

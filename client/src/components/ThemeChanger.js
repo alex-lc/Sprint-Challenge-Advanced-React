@@ -33,7 +33,7 @@ const ThemeChanger = () => {
     };
 
     return (
-        <ThemeContainer>
+        <ThemeContainer data-testid="themeChanger">
             <img onClick={toggleNight} src={Moon} alt="Night Mode" />
             <img onClick={toggleDay} src={Sun} alt="Day Mode" />
         </ThemeContainer>
