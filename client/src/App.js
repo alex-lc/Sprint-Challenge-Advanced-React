@@ -4,10 +4,11 @@ import styled from 'styled-components';
 
 // components
 import PlayerList from './components/PlayerList';
+import ThemeChanger from './components/ThemeChanger';
 
 // assets
-import Moon from './img/moon.svg';
-import Sun from './img/sun.svg';
+// import Moon from './img/moon.svg';
+// import Sun from './img/sun.svg';
 
 const Container = styled.div`
   width: 100%;
@@ -33,6 +34,13 @@ const Container = styled.div`
 
     img {
       width: 3rem;
+      transition: all 300ms;
+
+      &:hover {
+        transition: opacity 300ms;
+        opacity: 0.5;
+        cursor: pointer;
+      }
     }
   }
 `;
@@ -61,10 +69,11 @@ class App extends React.Component {
       <Container>
         <div className="header">
           <h1>Women's World Cup Soccer Players</h1>
-          <div className="controls">
+          {/* <div className="controls">
             <img src={Moon} alt="Night Mode" />
             <img src={Sun} alt="Day Mode" />
-          </div>
+          </div> */}
+          <ThemeChanger />
         </div>
         <PlayerList players={this.state.players} />
       </Container>

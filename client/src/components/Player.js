@@ -2,10 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Card = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 30rem;
     margin: 3rem 0;
     background: #1d1d5e;
     box-shadow: 0 1px 4px 0 #13133d;
+    border-radius: 0.5rem;
     padding: 3rem;
     color: #fafafa;
     font-weight: 300;
